@@ -11,6 +11,7 @@ I file del dataset RAVDESS sono scaricabili al seguente link: https://zenodo.org
 
 
 Per estrarre le feature audio e video e preparare i dataset: python main_preprocessing.py <path_to_audio> <path_to_video> <temporary_directory_path>
+
 Per addestrare o testare il modello: python main.py <model>
 
 MODELLI: 
