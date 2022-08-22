@@ -1,22 +1,21 @@
 # emotion-recognition-RAVDESS
 
-I file del dataset RAVDESS sono scaricabili al seguente link: https://zenodo.org/record/1188976#.YAiBZnqg-Uk 
+The RAVDESS dataset files can be downloaded at the following link: https://zenodo.org/record/1188976#.YAiBZnqg-Uk 
 
-*) Creare la cartella 'features' con le seguenti sottocartelle:
-  - 'audio_features' in cui vanno inseriti i file audio del dataset RAVDESS
-  - 'video_features' in cui vanno inseriti i file video del dataset RAVDESS
+*)Create the 'features' folder with the following subfolders:
+  - 'audio_features' in which the audio files of the RAVDESS dataset have to be inserted
+  - 'video_features' in which the video files of the RAVDESS dataset have to be inserted
   - 'temp_features'
 
-**) Scaricare il file PrivateTest_model.t7 da https://drive.google.com/file/d/1Oy_9YmpkSKX1Q8jkOhJbz3Mc7qjyISzU/view e inserirlo nella cartella 'models'
+**) Download the PrivateTest_model.t7 file from https://drive.google.com/file/d/1Oy_9YmpkSKX1Q8jkOhJbz3Mc7qjyISzU/view and place it in the 'models' folder
 
+To extract audio and video features and prepare datasets: python main_preprocessing.py <path_to_audio> <path_to_video> <temporary_directory_path>
 
-Per estrarre le feature audio e video e preparare i dataset: python main_preprocessing.py <path_to_audio> <path_to_video> <temporary_directory_path>
+To train or test the model: python main.py
 
-Per addestrare o testare il modello: python main.py <model>
+MODELS: 
+audio_model for the audio model 
+video_model for the video model 
+audio_video_model for the model that uses audio and video features
 
-MODELLI: 
-  audio_model per il modello audio
-  video_model per il modello video
-  audio_video_model per il modello che utilizza feature audio e video
-  
- experiments_and_results contiene i checkpoint ottenuti durante la fase di apprendimento (possibile utilizzarli per testare i modelli senza dover riaddestrare le reti)
+experiments_and_results contains the checkpoints obtained during the learning phase (can be used to test models without having to retrain networks)
